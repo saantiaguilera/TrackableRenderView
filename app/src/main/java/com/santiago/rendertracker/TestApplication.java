@@ -12,6 +12,6 @@ public class TestApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        RenderTrackerInjector.init(getApplicationContext(), TestView.class);
+        RenderTrackerInjector.track(this, TestView.class);
     }
 }

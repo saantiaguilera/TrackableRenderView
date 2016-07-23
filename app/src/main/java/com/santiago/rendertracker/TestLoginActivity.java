@@ -20,19 +20,8 @@ public class TestLoginActivity extends Activity {
 
         setContentView(R.layout.activity_test_login);
 
-        try {
-            ((ViewGroup) findViewById(android.R.id.content)).addView((View) TestView.class.getClassLoader().loadClass("com.santiago.rendertracker.TestView").getConstructor(Context.class).newInstance(this));
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }
+            TestView testView = new TestView(this);
+            testView.draw(null);
     }
 
 }
